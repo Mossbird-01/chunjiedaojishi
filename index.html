@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html>  
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<head>
+  <title>春节倒计时 By MossBird</title>
+   <style> 
+    body {  
+      display: flex; 
+      justify-content: center;  
+      align-items: center;  
+      height: 100vh;  
+      margin: 0;  
+      background-color: #f1f1f1;  
+      font-family:"华文行楷";
+      text-align:center
+    }  
+  </style>  
+</head> 
+  <body> 
+  <font size="14" color="white"  <p>春节倒计时</p>
+  <body/>
+  <body>
+  <p id="countdown"></p>  
+  <script>  
+    // 设置目标日期  
+    var targetDate = new Date("2024-02-10T08:00:00");  
+  
+    // 更新倒计时每秒  
+    setInterval(function() {  
+      var now = new Date();  
+      var distance = targetDate - now;  
+  
+      // 计算时间差  
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));  
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);  
+  
+      // 显示倒计时  
+      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒 ";  
+  
+      // 如果到达目标日期，显示相应消息  
+      if (distance < 0) {  
+        document.getElementById("countdown").innerHTML = "新春快乐！";  
+      }  
+    }, 1000);  
+  </script>
+ <body background="R-C.jpg"
+    style="background-repeat:no-repeat
+    background-attachment:fixed;
+    background-size:100% 100%; ">
+<audio autoplay="autoplay" loop="loop" preload="auto" src="春风十里迎新年.mp3" ></audio>
+</body>  
+</html>
